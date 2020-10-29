@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+        width: 700px;
+        height: 700px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+
+</div>
+
+</body>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.8&key=0edfcc89fef8da1b5b0cd9e31ae2d8cd"></script>
+<script>
+    window.onload = function(){
+        var map = new AMap.Map("box", {
+                zoom: 15,
+                center: [121.544379, 31.221517]
+
+            }
+        );
+        var marker = new AMap.Marker({
+            icon: "5.png",
+            map: map,
+            position: [121.600891,31.253796],
+            offset: new AMap.Pixel(-16,-45),
+            title: "我最喜欢的地方：金桥"
+            }
+
+        )
+        map.add(marker);
+    }
+</script>
+</html>

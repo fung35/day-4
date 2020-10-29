@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container{
+            width: 500px;
+            height: 500px;
+        }</style>
+
+        </head>
+<body>
+
+          <div id="container" ></div>
+</body>
+                                             <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.8&key=0edfcc89fef8da1b5b0cd9e31ae2d8cd"></script>
+
+        <!--四、异步初始化高德地图插件-->
+            <script>
+        //初始化地图插件
+          window.onload = function(){
+        var map = new AMap.Map("container", {
+            zoom: 15, //设置地图显示的缩放级别
+            center: [116.44927, 39.9584] //设置地图中心点坐标
+        });
+
+        // 创建一个 Marker 实例：（标记点）
+           var marker = new AMap.Marker({
+            position: new AMap.LngLat(116.44927, 39.9584), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+            title: "位置标题"
+        });
+
+        // 将创建的点标记添加到已有的地图实例：
+           map.add(marker);
+        }
+        </script>
+</html>
